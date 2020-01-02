@@ -13,12 +13,12 @@ function createTodoItem(title) {
 
     const editButton = document.createElement('button');
     editButton.innerText = 'Изменить';
-    editButton.className = 'delete';
+    editButton.className = 'edit';
 
     const deleteButton = document.createElement('button');
     deleteButton.innerText = 'Удалить';
     deleteButton.className = 'delete';
-
+ 
     const listItem = document.createElement('li');
     listItem.className = 'todo-item';
 
@@ -40,7 +40,7 @@ function bindEvents(todoItem) {
     const deleteButton = todoItem.querySelector('button.delete');
 
     checkbox.addEventListener('change', toggleTodoItem);
-    // editButton.addEventListener('click', editTodoItem);
+    editButton.addEventListener('click', editTodoItem);
     deleteButton.addEventListener('click', deleteTodoItem);
 };
 
